@@ -76,7 +76,13 @@ namespace Svg
         }
         public void DrawPath(Pen pen, GraphicsPath path)
         {
-            _innerGraphics.DrawPath(pen, path);
+            try
+            {
+                _innerGraphics.DrawPath(pen, path);
+            }
+            catch
+            {
+            }
         }
         public void FillPath(Brush brush, GraphicsPath path)
         {
